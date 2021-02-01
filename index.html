@@ -17,30 +17,33 @@
             <div class="row">
                 <div class="col-md-3 bg-light" id="city-search">
                     <label for="city-search" class="form-label">Search for a City:</label>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="" aria-label="Name of city being searched" aria-describedby="searchbtn" id="city-search">
+                    <div class="input-group mb-3" id="search-group">
+                        <input type="text" class="form-control" placeholder="" aria-label="Name of city being searched" aria-describedby="searchbtn" id="city">
                         <button class="btn btn-outline-primary" type="button" id="searchbtn"><span class="oi oi-magnifying-glass"></span></button>
                     </div>
-                    <ul class="list-group" id="prevSearchList">
-                        <li class="list-group-item" id="prevCity1"></li>
-                        <li class="list-group-item" id="prevCity2"></li>
-                        <li class="list-group-item" id="prevCity3"></li>
-                        <li class="list-group-item" id="prevCity4"></li>
-                        <li class="list-group-item" id="prevCity5"></li>
-                        <li class="list-group-item" id="prevCity6"></li>
-                        <li class="list-group-item" id="prevCity7"></li>
-                        <li class="list-group-item" id="prevCity8"></li>
+                    <ul class="btn-group-vertical" id="prevSearchList">
+                        <button class="btn" id="prevCity0"></button>
+                        <button class="btn" id="prevCity1"></button>
+                        <button class="btn" id="prevCity2"></button>
+                        <button class="btn" id="prevCity3"></button>
+                        <button class="btn" id="prevCity4"></button>
+                        <button class="btn" id="prevCity5"></button>
+                        <button class="btn" id="prevCity6"></button>
+                        <button class="btn" id="prevCity7"></button>
                     </ul>
                 </div>
                 <div class="col-md-9" id="city-weather">
                     <div class="row">
                         <div class="col-12" id="city-current-conditions">
                             <div class="card">
-                                <h2 class="card-title mb-4" id="current-city">Orlando</h2>
+                                <div id="current-weather-heading">
+                                    <h2 class="card-title mb-4" id="current-city"></h2>
+                                    <img src="" alt="" id="current-city-icon">
+                                </div>
                                 <span class="card-text mb-4" id="temp">Temperature: </span>
                                 <span class="card-text mb-4" id="humidity">Humidity: </span>
                                 <span class="card-text mb-4" id="wind">Wind Speed: </span>
-                                <span class="card-text mb-4" id="UV-label">UV Index: <span class="bg-danger text-white p-2 rounded" id="UV-index">9.467</span></span>
+                                <span class="card-text mb-4" id="UV-label">UV Index: <span class="text-white p-2 rounded" id="UV-index">9.467</span></span>
                             </div>
                         </div>
                     </div>
@@ -49,34 +52,34 @@
                             <h3 class="mt-3">5-Day Forecast:</h3>
                             <div class="d-flex justify-content-between">
                                 <div class="card bg-primary">
-                                    <h4 class="card-title text-white" id="card1-date"></h4>
-                                    <span class="card-text" id="card1-icon"></span>
-                                    <span class="card-text text-white" id="card1-temp">Temp: </span>
+                                    <h4 class="card-title text-white m-2" id="card0-date"></h4>
+                                    <img id="card0-icon" src=""/>
+                                    <span class="card-text text-white mb-3" id="card0-temp">Temp: </span>
+                                    <span class="card-text text-white" id="card0-humidity">Humidity: </span>
+                                </div>
+                                <div class="card bg-primary">
+                                    <h4 class="card-title text-white m-2" id="card1-date"></h4>
+                                    <img id="card1-icon" src=""/>
+                                    <span class="card-text text-white mb-3" id="card1-temp">Temp: </span>
                                     <span class="card-text text-white" id="card1-humidity">Humidity: </span>
                                 </div>
                                 <div class="card bg-primary">
-                                    <h4 class="card-title text-white" id="card2-date"></h4>
-                                    <span class="card-text" id="card2-icon"></span>
-                                    <span class="card-text text-white" id="card2-temp">Temp: </span>
+                                    <h4 class="card-title text-white m-2" id="card2-date"></h4>
+                                    <img id="card2-icon" src=""/>
+                                    <span class="card-text text-white mb-3" id="card2-temp">Temp: </span>
                                     <span class="card-text text-white" id="card2-humidity">Humidity: </span>
                                 </div>
                                 <div class="card bg-primary">
-                                    <h4 class="card-title text-white" id="card3-date"></h4>
-                                    <span class="card-text" id="card3-icon"></span>
-                                    <span class="card-text text-white" id="card3-temp">Temp: </span>
+                                    <h4 class="card-title text-white m-2" id="card3-date"></h4>
+                                    <img id="card3-icon" src=""/>
+                                    <span class="card-text text-white mb-3" id="card3-temp">Temp: </span>
                                     <span class="card-text text-white" id="card3-humidity">Humidity: </span>
                                 </div>
                                 <div class="card bg-primary">
-                                    <h4 class="card-title text-white" id="card4-date"></h4>
-                                    <span class="card-text" id="card4-icon"></span>
-                                    <span class="card-text text-white" id="card4-temp">Temp: </span>
+                                    <h4 class="card-title text-white m-2" id="card4-date"></h4>
+                                    <img id="card4-icon" src=""/>
+                                    <span class="card-text text-white mb-3" id="card4-temp">Temp: </span>
                                     <span class="card-text text-white" id="card4-humidity">Humidity: </span>
-                                </div>
-                                <div class="card bg-primary">
-                                    <h4 class="card-title text-white" id="card5-date"></h4>
-                                    <span class="card-text" id="card5-icon"></span>
-                                    <span class="card-text text-white" id="card5-temp">Temp: </span>
-                                    <span class="card-text text-white" id="card5-humidity">Humidity: </span>
                                 </div>
                             </div>
                         </div>
@@ -87,5 +90,9 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
